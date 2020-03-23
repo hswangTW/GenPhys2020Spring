@@ -1,0 +1,80 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+    background-color: #F3F7F0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.top-bar {
+    height: 200px;
+    background-color: #223843;
+    margin: auto;
+    padding: 0px;
+}
+
+.title-container {
+    max-width: 700px;
+    height: 100px;
+    margin: auto;
+    padding: 50px;
+    white-space: nowrap;
+}
+
+.title-container h1{
+    text-align: left;
+    color: white;
+    margin: 0;
+    font-size: 3em;
+}
+
+.title-container h2 {
+    text-align: left;
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav-bar {
+    height: 50px;
+    background-color: #EEEBD0;
+    border-left: 2px solid #DDDDDD;
+    border-right: 2px solid #DDDDDD;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav a {
+    font-family: "Noto Sans TC", "Noto Sans" "Helvetica", "微軟正黑體", sans-serif;
+    font-size: 24px;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+
+.main-content {
+    background-color: #FFFFFF;
+    padding: 20px 50px;
+    border: 2px solid #DDDDDD;
+}
+
+.lecture-link {
+    font-family: "Noto Sans TC", "Noto Sans" "Helvetica", "微軟正黑體", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hw-link {
+    font-family: "Noto Sans TC", "Noto Sans" "Helvetica", "微軟正黑體", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
