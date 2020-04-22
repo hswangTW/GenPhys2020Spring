@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
-        VP10: Non-ideal Capacitor - HackMD
+        VP12 Mutual Inductance - HackMD
     </title>
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
@@ -34,87 +34,35 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true" style="position: relative;"><h1 id="VP10-Non-ideal-Capacitor"><a class="anchor hidden-xs" href="#VP10-Non-ideal-Capacitor" title="VP10-Non-ideal-Capacitor"><span class="octicon octicon-link"></span></a>VP10: Non-ideal Capacitor</h1><p>這學期程式作業只會有紙本說明，不會有影片講解。但是程式概念不會超出上學期所學，而物理部分則是本學期的內容。</p><ul>
-<li>
-<p><a href="pdf/VP10.pdf" target="_blank" rel="noopener">官方PDF檔</a></p>
-<blockquote>
-<p>跟新同學說明一下，上面這是老師提供的 PDF 檔。因為覺得這樣 code 不太好讀，所以我和另一班助教會把作業說明重打成 Markdown 格式（放在網站上的是 html 就是了）。</p>
-</blockquote>
-</li>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true" style="position: relative;"><h1 id="VP12-Mutual-Inductance"><a class="anchor hidden-xs" href="#VP12-Mutual-Inductance" title="VP12-Mutual-Inductance"><span class="octicon octicon-link"></span></a>VP12 Mutual Inductance</h1><p>還是提醒大家一下，副檔名只是用來標示檔案格式的，單純修改副檔名並不會影響檔案的內容，只會讓你的標示和內容格式不符。（如：就算把 <code>docx</code> 改成 <code>txt</code>，你還是沒辦法用記事本打開它，因為它骨子裡仍然是個 word 檔）</p><ul>
+<li><a href="pdf/VP12.pdf" target="_blank" rel="noopener">官方 PDF 檔</a></li>
 </ul><h3 id="同學們的影片"><a class="anchor hidden-xs" href="#同學們的影片" title="同學們的影片"><span class="octicon octicon-link"></span></a>同學們的影片</h3><ul>
-<li><a href="https://www.youtube.com/playlist?list=PLH1vQ79HZo9n4t_mN-TCbz9F6jzuyH-pp" target="_blank" rel="noopener">這部份當然是還沒有啦</a></li>
-</ul><h2 id="作業繳交格式"><a class="anchor hidden-xs" href="#作業繳交格式" title="作業繳交格式"><span class="octicon octicon-link"></span></a>作業繳交格式</h2><p>請上傳一個 zip 檔（壓縮檔，請注意副檔名要是 <code>zip</code>）到 CEIBA，zip 檔內需要包含一個<strong>名稱是自己學號的資料夾</strong>，裡面包含一個名為 <code>must.py</code> 的 py 檔。而若本次作業有拍攝說明影片，請<strong>將影片連結寫在</strong> <code>video.txt</code> <strong>裡面，並一併放入學號資料夾中</strong>。</p><p>範例：（zip 檔名可以隨便取，CEIBA 系統會自己把檔名改掉）</p><pre><code>hisashiburi.zip
+<li><a href="" target="_blank" rel="noopener">這部份當然是還沒有啦</a></li>
+</ul><h2 id="作業繳交格式"><a class="anchor hidden-xs" href="#作業繳交格式" title="作業繳交格式"><span class="octicon octicon-link"></span></a>作業繳交格式</h2><p>請上傳一個 zip 檔（壓縮檔，請注意副檔名要是 <code>zip</code>）到 CEIBA，zip 檔內需要包含一個<strong>名稱是自己學號的資料夾</strong>，裡面包含一個名為 <code>must.py</code> 的 py 檔。而若本次作業有拍攝說明影片，請<strong>將影片連結寫在</strong> <code>video.txt</code> <strong>裡面，並一併放入學號資料夾中</strong>。</p><p>範例：（zip 檔名可以隨便取，CEIBA 系統會自己把檔名改掉）</p><pre><code>the_zip_file.zip
 └── r07222060
     ├── must.py
     └── video.txt
 </code></pre><blockquote>
-<h4 id="助教註0"><a class="anchor hidden-xs" href="#助教註0" title="助教註0"><span class="octicon octicon-link"></span></a>助教註:</h4>
-<p>如果你是用 JuPyter notebook 寫的，請記得將你的程式用 <code>.py</code> 格式下載下來，不要給我 <code>.ipynb</code> 或甚至 <code>.html</code>。</p>
-</blockquote><h3 id="繳交期限"><a class="anchor hidden-xs" href="#繳交期限" title="繳交期限"><span class="octicon octicon-link"></span></a>繳交期限</h3><p><code>2020/04/01 WED 21:00</code></p><h2 id="I-Non-ideal-Capacitor-amp-Numerical-Laplacian-Solver"><a class="anchor hidden-xs" href="#I-Non-ideal-Capacitor-amp-Numerical-Laplacian-Solver" title="I-Non-ideal-Capacitor-amp-Numerical-Laplacian-Solver"><span class="octicon octicon-link"></span></a>I. Non-ideal Capacitor &amp; Numerical Laplacian Solver</h2><p>A parallel-plate capacitor, shown in the figure, has an infinite length in z-axis. The distance between the plates is d = 1 mm, the width of both plates is L = 5 mm, and the voltage is 100 Volt on the top plate and -100 Volt on the bottom. If we want to consider the edge effect of the non-ideal capacitor, we need to calculate numerically the total charge on each plate per meter length in z-axis in order to obtain the capacitabce value per meter length in z-axis.</p>
-<p><img src="pic/VP10/1.png" alt="1" height=300></p>
-<blockquote>
 <h4 id="助教註"><a class="anchor hidden-xs" href="#助教註" title="助教註"><span class="octicon octicon-link"></span></a>助教註:</h4>
-<p>I’m sorry that the readability here is poor due to the numerous equations. You can go check the PDF file of Professor if you wish.</p>
-</blockquote><p>From General Physics course, we already know that anywhere <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\vec{E}&amp;space;=&amp;space;-(\frac{\partial{V}}{\partial{x}}\hat{x}+\frac{\partial{V}}{\partial{y}}\hat{y}+\frac{\partial{V}}{\partial{z}}\hat{z})" title="\vec{E} = -(\frac{\partial{V}}{\partial{x}}\hat{x}+\frac{\partial{V}}{\partial{y}}\hat{y}+\frac{\partial{V}}{\partial{z}}\hat{z})" height="36">. Now we choose an infinitesimal cube of volume <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;dxdydz" title="dxdydz" height="18">. In the two faces perpendicular to the x-axis, we have the net electric flux for the two faces as<br>
-<img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;E_{x}(x+dx)dydz&amp;space;-&amp;space;E_{x}(x)dydz&amp;space;=&amp;space;(\frac{\partial{E_{x}}}{\partial{x}}dx)dydz&amp;space;=&amp;space;\frac{\partial{E_{x}}}{\partial{x}}dV" title="E_{x}(x+dx)dydz - E_{x}(x)dydz = (\frac{\partial{E_{x}}}{\partial{x}}dx)dydz = \frac{\partial{E_{x}}}{\partial{x}}dV" height="36">.</p>
-<p><img src="pic/VP10/2.png" alt="2" height=250></p>
-<p>Similiarly the net flux for the two faces perpendicular to y-axis is <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial{E_{y}}}{\partial{y}}dV" title="\frac{\partial{E_{y}}}{\partial{y}}dV" height="36">, and the two faces to z-axis is <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial{E_{z}}}{\partial{z}}dV" title="\frac{\partial{E_{z}}}{\partial{z}}dV" height="36">. Therefore, the total flux around the cube is <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\phi=(\frac{\partial{E_{x}}}{\partial{x}}+\frac{\partial{E_{y}}}{\partial{y}}+\frac{\partial{E_{z}}}{\partial{z}})dV" title="\phi=(\frac{\partial{E_{x}}}{\partial{x}}+\frac{\partial{E_{y}}}{\partial{y}}+\frac{\partial{E_{z}}}{\partial{z}})dV" height="36">. If no charge is inside this cube, by Gauss’ Law, <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\phi=\frac{q}{\epsilon_{0}}=0" title="\phi=\frac{q}{\epsilon_{0}}=0" height="36">, meaning <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial{E_{x}}}{\partial{x}}+\frac{\partial{E_{y}}}{\partial{y}}+\frac{\partial{E_{z}}}{\partial{z}}=0" title="\frac{\partial{E_{x}}}{\partial{x}}+\frac{\partial{E_{y}}}{\partial{y}}+\frac{\partial{E_{z}}}{\partial{z}}=0" height="36">. With  <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\vec{E}&amp;space;=&amp;space;-(\frac{\partial{V}}{\partial{x}}\hat{x}+\frac{\partial{V}}{\partial{y}}\hat{y}+\frac{\partial{V}}{\partial{z}}\hat{z})=E_{x}\hat{x}+E_{y}\hat{y}+E_{z}\hat{z}" title="\vec{E} = -(\frac{\partial{V}}{\partial{x}}\hat{x}+\frac{\partial{V}}{\partial{y}}\hat{y}+\frac{\partial{V}}{\partial{z}}\hat{z})=E_{x}\hat{x}+E_{y}\hat{y}+E_{z}\hat{z}" height="36">, it then becomes <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}+\frac{\partial^2{V}}{\partial{z^2}}=0" title="\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}+\frac{\partial^2{V}}{\partial{z^2}}=0" height="36">, which is called a Laplace’s Equation and is usually written as <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\nabla^2{V}=0" title="\nabla^2{V}=0" height="13">. The operator <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\nabla^2" title="\nabla^2" height="13"> is called an Laplacian operator.</p><p>Since in this problem, there is no charge variation along the z-axis, by symmetry, <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;E_{z}=0" title="E_{z}=0" height="13"> and <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial^2{V}}{\partial{z^2}}=0" title="\frac{\partial^2{V}}{\partial{z^2}}=0" height="36"> everywhere. We can reduce the 3-dimensional Laplace’s Equation to 2-dimensonal, <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}=0" title="\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}=0" height="36">. With the condition that at the position of the top and bottom plates <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V=+100V" title="V=+100V" height="13"> and <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;-100V" title="-100V" height="13"> respectively, we can try to solve this Laplacian problem by the numerical Laplacian solver. The simplest numerical Laplacian solver is illustrated as the following and starts from the Taylor’s expansion:</p><p><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V(x+h,y)&amp;space;\approx&amp;space;V(x,y)&amp;space;+&amp;space;h\frac{\partial{V}}{\partial{x}}&amp;space;+&amp;space;\frac{h^2}{2}\frac{\partial^2{V}}{\partial{x^2}}" title="V(x+h,y) \approx V(x,y) + h\frac{\partial{V}}{\partial{x}} + \frac{h^2}{2}\frac{\partial^2{V}}{\partial{x^2}}" height="36"> <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\qquad\qquad" title="\qquad\qquad" height="36"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\qquad\qquad" title="\qquad\qquad" height="36"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V(x,y+h)&amp;space;\approx&amp;space;V(x,y)&amp;space;+&amp;space;h\frac{\partial{V}}{\partial{y}}&amp;space;+&amp;space;\frac{h^2}{2}\frac{\partial^2{V}}{\partial{y^2}}&amp;space;" title="V(x,y+h) \approx V(x,y) + h\frac{\partial{V}}{\partial{y}} + \frac{h^2}{2}\frac{\partial^2{V}}{\partial{y^2}}" height="36"></p><p><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V(x-h,y)&amp;space;\approx&amp;space;V(x,y)&amp;space;-&amp;space;h\frac{\partial{V}}{\partial{x}}&amp;space;+&amp;space;\frac{h^2}{2}\frac{\partial^2{V}}{\partial{x^2}}" title="V(x-h,y) \approx V(x,y) - h\frac{\partial{V}}{\partial{x}} + \frac{h^2}{2}\frac{\partial^2{V}}{\partial{x^2}}" height="36"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\qquad\qquad" title="\qquad\qquad" height="36"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\qquad\qquad" title="\qquad\qquad" height="36"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V(x,y-h)&amp;space;\approx&amp;space;V(x,y)&amp;space;-&amp;space;h\frac{\partial{V}}{\partial{y}}&amp;space;+&amp;space;\frac{h^2}{2}\frac{\partial^2{V}}{\partial{y^2}}&amp;space;" title="V(x,y-h) \approx V(x,y) - h\frac{\partial{V}}{\partial{y}} + \frac{h^2}{2}\frac{\partial^2{V}}{\partial{y^2}}" height="36"></p><p>We add the above four eqations and will obtain<img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;V(x,y)=\frac{1}{4}[V(x+h,y)&amp;space;+&amp;space;V(x-h,y)&amp;space;+&amp;space;V(x,y+h)&amp;space;+&amp;space;V(x,y-h)]&amp;space;\qquad&amp;space;" title="V(x,y)=\frac{1}{4}[V(x+h,y) + V(x-h,y) + V(x,y+h) + V(x,y-h)] \qquad" height="36"></p><p>because <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}=0" title="\frac{\partial^2{V}}{\partial{x^2}}+\frac{\partial^2{V}}{\partial{y^2}}=0" height="36">.</p><p>Therefore, the potential at each grid-point is simply the mean value of its nearest neighbors. To find the soulution one must fix the values of the grid-points on the boundaries or on the positions according to the required conditions and then iterate the potentials until successive results agree each other to within the desired tolerance. This usually can be done with many enough iterations.</p><h2 id="II-Homework"><a class="anchor hidden-xs" href="#II-Homework" title="II-Homework"><span class="octicon octicon-link"></span></a>II. Homework</h2><h3 id="MUST"><a class="anchor hidden-xs" href="#MUST" title="MUST"><span class="octicon octicon-link"></span></a>MUST</h3><p>In the following program:</p><ol>
-<li>We use the finite-difference methods for the grid points on the region of interest and set the potential on the top and bottom plates to be <img src="https://latex.codecogs.com/gif.latex?\dpi{150}&amp;space;\pm&amp;space;100V" title="\pm 100V" height="13">.</li>
-<li>We solve the 2-D Laplace’s equation at each grid-point</li>
-<li>By taking the gradient of the potential, we obtain the electric field on x-y plane.</li>
-<li>By numerically integrating the Gauss surface, we obtain the total charge on the capacitor.</li>
-<li>Dividing the total charge by the voltage difference, we obtain the capacitance.</li>
-</ol><p>Your job is to complete the template code for <strong>2.</strong>, <strong>4.</strong>, and <strong>5.</strong> and compare the value of <strong>5.</strong> to the value of an ideal parallel-plate capacitor.</p><p>(Note: You can change this program easily to calculate the capacitance of a rectangular parallel-plate capacitor, i.e. the length in z is not infinite)</p><pre><code class="python hljs"><span class="hljs-keyword">from</span> numpy <span class="hljs-keyword">import</span> * 
-<span class="hljs-keyword">from</span> vpython <span class="hljs-keyword">import</span> *
-
-epsilon = <span class="hljs-number">8.854E-12</span> 
-N = <span class="hljs-number">101</span>
-h = <span class="hljs-number">1E-2</span>/(N<span class="hljs-number">-1</span>)
-L, d= <span class="hljs-number">5E-3</span>,<span class="hljs-number">1E-3</span>
-V0 = <span class="hljs-number">200</span>
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">solve_laplacian</span><span class="hljs-params">(u, u_cond, h, Niter=<span class="hljs-number">5000</span>)</span>:</span> 
-    V = array(u)
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(Niter):
-        V[u_cond] = u[u_cond]
-        V[<span class="hljs-number">1</span>:<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>:<span class="hljs-number">-1</span>] = <span class="hljs-number">0</span>  <span class="hljs-comment"># replace this 0 by your Laplacian Solver</span>
-    <span class="hljs-keyword">return</span> V
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_field</span><span class="hljs-params">(V, h)</span>:</span>
-    Ex, Ey = gradient(V)
-    Ex, Ey = -Ex/h, -Ey/h 
-    <span class="hljs-keyword">return</span> Ex, Ey
-
-u = zeros([N, N])
-u[int(N/<span class="hljs-number">2</span>)-int(L/h/<span class="hljs-number">2.0</span>):int(N/<span class="hljs-number">2</span>)+int(L/h/<span class="hljs-number">2.0</span>), int(N/<span class="hljs-number">2</span>) - int(d/h/<span class="hljs-number">2.0</span>)] = -V0/<span class="hljs-number">2</span> 
-u[int(N/<span class="hljs-number">2</span>)-int(L/h/<span class="hljs-number">2.0</span>):int(N/<span class="hljs-number">2</span>)+int(L/h/<span class="hljs-number">2.0</span>), int(N/<span class="hljs-number">2</span>) + int(d/h/<span class="hljs-number">2.0</span>)] = V0/<span class="hljs-number">2</span> 
-u_cond = not_equal(u, <span class="hljs-number">0</span>)
-
-V = solve_laplacian(u, u_cond, h)
-
-scene = canvas(title=<span class="hljs-string">'non-ideal capacitor'</span>, height=<span class="hljs-number">1000</span>, width=<span class="hljs-number">1000</span>, center = vec(N*h/<span class="hljs-number">2</span>, N*h/<span class="hljs-number">2</span>, <span class="hljs-number">0</span>))
-scene.lights = []
-scene.ambient=color.gray(<span class="hljs-number">0.99</span>)
-box(pos = vec(N*h/<span class="hljs-number">2</span> , N*h/<span class="hljs-number">2</span> - d/<span class="hljs-number">2</span> - h, <span class="hljs-number">0</span>), length = L, height = h/<span class="hljs-number">5</span>, width = h)
-box(pos = vec(N*h/<span class="hljs-number">2</span> , N*h/<span class="hljs-number">2</span> + d/<span class="hljs-number">2</span> - h, <span class="hljs-number">0</span>), length = L, height = h/<span class="hljs-number">5</span>, width = h)
-
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(N):
-    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(N):
-        point = box(pos=vec(i*h, j*h, <span class="hljs-number">0</span>), length = h, height= h, width = h/<span class="hljs-number">10</span>, color=vec((V[i,j]+<span class="hljs-number">100</span>)/<span class="hljs-number">200</span>,(<span class="hljs-number">100</span>-V[i,j])/<span class="hljs-number">200</span>,<span class="hljs-number">0.0</span>) )
-
-Ex, Ey = get_field(V, h)
-
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, N):
-    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, N):
-        ar = arrow(pos = vec( i*h, j*h, h/<span class="hljs-number">10</span>), axis =vec (Ex[i,j]/<span class="hljs-number">2E9</span>, Ey[i,j]/<span class="hljs-number">2E9</span>, <span class="hljs-number">0</span>), shaftwidth = h/<span class="hljs-number">6.0</span>, color=color.black)
-
-<span class="hljs-comment">#find Q, find C_nonideal = Q/(delta V) </span>
-<span class="hljs-comment">#Compare C_nonideal to C_ideal</span>
-</code></pre><h2 id="III-Grading-Policy"><a class="anchor hidden-xs" href="#III-Grading-Policy" title="III-Grading-Policy"><span class="octicon octicon-link"></span></a>III. Grading Policy</h2><ol>
-<li>Correctly calculated the theoretical capacitance of the ideal capacitor (20%)</li>
-<li>The solution of laplace equation is roughly correct (40%)</li>
-<li>The simulated value is bigger than theoretical value (20%)</li>
-<li>The simulated value is roughly correct (20%)</li>
+<p>如果你是用 JuPyter notebook 寫的，請記得將你的程式用 <code>.py</code> 格式下載下來，不要給我 <code>.ipynb</code> 或甚至 <code>.html</code>。</p>
+</blockquote><h3 id="Deadline"><a class="anchor hidden-xs" href="#Deadline" title="Deadline"><span class="octicon octicon-link"></span></a>Deadline</h3><p><code>2020/05/07 THU 21:00</code></p><h2 id="Homework"><a class="anchor hidden-xs" href="#Homework" title="Homework"><span class="octicon octicon-link"></span></a>Homework</h2><p>There are two circular loops, with radii <code>R = 12 cm</code> on <code>z = 0 cm</code> plane and <code>r = 6 cm</code> on <code>z = Height = 10 cm</code> plane. Find the mutual inductance between the two loops by:</p><p>(1) Calculating the magnetic flux inside the small loop caused by the current on the large loop<br>
+(2) Vice versa.</p><p><img src="pic/VP12/VP12-1.png" alt="VP12-1"></p><p>You can do this by your own method (especially by <code>numpy</code> array calculation, that would give the results much faster). If you have no clue, you may try the following steps:</p><p><img src="pic/VP12/VP12-2.png" alt="VP12-2"></p><p>For part (1):</p><ol>
+<li>Partition the area inside the small loop into <code>m</code> ring areas.</li>
+<li>Assume the large loop has a current <code>1A</code> on it. Cut the large loop into <code>n</code> pieces, each with length <code>ds</code>.</li>
+<li>Find the magnetic field at position <code>p</code> due to the current on each <code>ds</code> by Biot-Savart law.</li>
+<li>Sum the magnetic field cuased by the source from over all the <code>n</code> pieces <code>ds</code> along the large loop to get the total magnetic field at <code>p</code>.</li>
+<li>Multiply the magnetic field with the area of the ring area to get the magnetic flux inside that ring area, and sum over all <code>m</code> rings to get the total flux inside the small loop due to the current on the large loop.</li>
+<li>
+<img src="https://latex.codecogs.com/gif.latex?\dpi{300}&amp;space;M&amp;space;=&amp;space;\frac{N_s\phi_{sl}}{i_l}&amp;space;=&amp;space;\phi_{sl}&amp;space;,&amp;space;\text{for&amp;space;}N_s&amp;space;=&amp;space;1,&amp;space;\text{and&amp;space;}&amp;space;i_l&amp;space;=&amp;space;1A" title="M = \frac{N_s\phi_{sl}}{i_l} = \phi_{sl} , \text{for }N_s = 1, \text{and } i_l = 1A" height="40">
+</li>
+<li>You can do similarly for part (2).</li>
+<li>Check if the result of (1) = result of (2).</li>
+</ol><h2 id="Grading-Policy"><a class="anchor hidden-xs" href="#Grading-Policy" title="Grading-Policy"><span class="octicon octicon-link"></span></a>Grading Policy</h2><ol>
+<li>One of the mutual inductances and the correct value differs by less or equal to one order. (20%)</li>
+<li>One of the mutual inductances is of the same order as correct value. (20%)</li>
+<li>One of the mutual inductances is nearly correct. (20%)</li>
+<li>The two mutual inductances is of the same order. (20%)</li>
+<li>The two mutual inductances are nearly the same. (20%)</li>
 </ol></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
@@ -123,21 +71,17 @@ Ex, Ey = get_field(V, h)
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
-<li class=""><a href="#VP10-Non-ideal-Capacitor" title="VP10: Non-ideal Capacitor">VP10: Non-ideal Capacitor</a><ul class="nav">
+<li class=""><a href="#VP12-Mutual-Inductance" title="VP12 Mutual Inductance">VP12 Mutual Inductance</a><ul class="nav">
 <li class="invisable-node"><ul class="nav">
 <li><a href="#同學們的影片" title="同學們的影片">同學們的影片</a></li>
 </ul>
 </li>
 <li><a href="#作業繳交格式" title="作業繳交格式">作業繳交格式</a><ul class="nav">
-<li><a href="#繳交期限" title="繳交期限">繳交期限</a></li>
+<li><a href="#Deadline" title="Deadline">Deadline</a></li>
 </ul>
 </li>
-<li class=""><a href="#I-Non-ideal-Capacitor-amp-Numerical-Laplacian-Solver" title="I. Non-ideal Capacitor &amp; Numerical Laplacian Solver">I. Non-ideal Capacitor &amp; Numerical Laplacian Solver</a></li>
-<li><a href="#II-Homework" title="II. Homework">II. Homework</a><ul class="nav">
-<li><a href="#MUST" title="MUST">MUST</a></li>
-</ul>
-</li>
-<li><a href="#III-Grading-Policy" title="III. Grading Policy">III. Grading Policy</a></li>
+<li class=""><a href="#Homework" title="Homework">Homework</a></li>
+<li><a href="#Grading-Policy" title="Grading Policy">Grading Policy</a></li>
 </ul>
 </li>
 </ul>
@@ -147,21 +91,17 @@ Ex, Ey = get_field(V, h)
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
         <div class="toc"><ul class="nav">
-<li class=""><a href="#VP10-Non-ideal-Capacitor" title="VP10: Non-ideal Capacitor">VP10: Non-ideal Capacitor</a><ul class="nav">
+<li class=""><a href="#VP12-Mutual-Inductance" title="VP12 Mutual Inductance">VP12 Mutual Inductance</a><ul class="nav">
 <li class="invisable-node"><ul class="nav">
 <li><a href="#同學們的影片" title="同學們的影片">同學們的影片</a></li>
 </ul>
 </li>
 <li><a href="#作業繳交格式" title="作業繳交格式">作業繳交格式</a><ul class="nav">
-<li><a href="#繳交期限" title="繳交期限">繳交期限</a></li>
+<li><a href="#Deadline" title="Deadline">Deadline</a></li>
 </ul>
 </li>
-<li class=""><a href="#I-Non-ideal-Capacitor-amp-Numerical-Laplacian-Solver" title="I. Non-ideal Capacitor &amp; Numerical Laplacian Solver">I. Non-ideal Capacitor &amp; Numerical Laplacian Solver</a></li>
-<li><a href="#II-Homework" title="II. Homework">II. Homework</a><ul class="nav">
-<li><a href="#MUST" title="MUST">MUST</a></li>
-</ul>
-</li>
-<li><a href="#III-Grading-Policy" title="III. Grading Policy">III. Grading Policy</a></li>
+<li class=""><a href="#Homework" title="Homework">Homework</a></li>
+<li><a href="#Grading-Policy" title="Grading Policy">Grading Policy</a></li>
 </ul>
 </li>
 </ul>
