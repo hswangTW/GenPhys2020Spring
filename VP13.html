@@ -45,7 +45,7 @@
 </code></pre><blockquote>
 <h4 id="助教註"><a class="anchor hidden-xs" href="#助教註" title="助教註"><span class="octicon octicon-link"></span></a>助教註:</h4>
 <p>如果你是用 JuPyter notebook 寫的，請記得將你的程式用 <code>.py</code> 格式下載下來，不要給我 <code>.ipynb</code> 或甚至 <code>.html</code>。</p>
-</blockquote><h2 id="Deadline"><a class="anchor hidden-xs" href="#Deadline" title="Deadline"><span class="octicon octicon-link"></span></a>Deadline</h2><p><code>2020/05/21 THU 21:00</code></p><h2 id="I-Homework"><a class="anchor hidden-xs" href="#I-Homework" title="I-Homework"><span class="octicon octicon-link"></span></a>I. Homework</h2><p><img src="pic/VP13/RLC.png" alt="RLC" height="250"></p><p>An RLC circuit, with <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;&amp;space;\text{R}&amp;space;=&amp;space;30\&amp;space;(\Omega)">, <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;\&amp;space;\text{L}&amp;space;=&amp;space;200\&amp;space;(\text{mH})">, <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;&amp;space;\text{C}&amp;space;=&amp;space;20\&amp;space;(\mu\textup{F})">. The driving voltage source is</p><img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;v(t)&amp;space;=&amp;space;\left\{\begin{matrix}&amp;space;0,&amp;space;&amp;&amp;space;\text{if}\&amp;space;t&amp;space;<&amp;space;0&amp;space;\\&amp;space;36&amp;space;\cdot&amp;space;\sin(2\pi&amp;space;f_d&amp;space;t),&amp;space;&amp;&amp;space;\text{if}\&amp;space;0&amp;space;\leq&amp;space;t&amp;space;<&amp;space;12\text{T}&amp;space;\\&amp;space;0,&amp;space;&amp;&amp;space;\text{if}\&amp;space;12\text{T}&amp;space;\leq&amp;space;t&amp;space;\end{matrix}\right." title="v(t) = \left\{\begin{matrix} 0, &amp; \text{if}\ t < 0 \\ 36 \cdot \sin(2\pi f_d t), &amp; \text{if}\ 0 \leq t < 12T \\ 0, &amp; \text{if}\ 12T \leq t \end{matrix}\right." height="80"><p><br>
+</blockquote><h2 id="Deadline"><a class="anchor hidden-xs" href="#Deadline" title="Deadline"><span class="octicon octicon-link"></span></a>Deadline</h2><p><code>2020/05/21 THU 21:00</code></p><h2 id="Homework"><a class="anchor hidden-xs" href="#Homework" title="Homework"><span class="octicon octicon-link"></span></a>Homework</h2><p><img src="pic/VP13/RLC.png" alt="RLC" height="250"></p><p>An RLC circuit, with <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;&amp;space;\text{R}&amp;space;=&amp;space;30\&amp;space;(\Omega)">, <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;\&amp;space;\text{L}&amp;space;=&amp;space;200\&amp;space;(\text{mH})">, <img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;&amp;space;\text{C}&amp;space;=&amp;space;20\&amp;space;(\mu\textup{F})">. The driving voltage source is</p><img src="https://latex.codecogs.com/svg.latex?\dpi{300}&amp;space;v(t)&amp;space;=&amp;space;\left\{\begin{matrix}&amp;space;0,&amp;space;&amp;&amp;space;\text{if}\&amp;space;t&amp;space;<&amp;space;0&amp;space;\\&amp;space;36&amp;space;\cdot&amp;space;\sin(2\pi&amp;space;f_d&amp;space;t),&amp;space;&amp;&amp;space;\text{if}\&amp;space;0&amp;space;\leq&amp;space;t&amp;space;<&amp;space;12\text{T}&amp;space;\\&amp;space;0,&amp;space;&amp;&amp;space;\text{if}\&amp;space;12\text{T}&amp;space;\leq&amp;space;t&amp;space;\end{matrix}\right." title="v(t) = \left\{\begin{matrix} 0, &amp; \text{if}\ t < 0 \\ 36 \cdot \sin(2\pi f_d t), &amp; \text{if}\ 0 \leq t < 12T \\ 0, &amp; \text{if}\ 12T \leq t \end{matrix}\right." height="80"><p><br>
 where <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;f_d&amp;space;=&amp;space;120\&amp;space;(\text{Hz})" title="f_d = 120\ (\text{Hz})">, <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;\text{T}&amp;space;=&amp;space;1/f_d" title="\text{T} = 1/f_d">.</p><h3 id="1"><a class="anchor hidden-xs" href="#1" title="1"><span class="octicon octicon-link"></span></a>(1)</h3><p>Solve this circuit numerically and plot the voltage <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;v(t)" title="v(t)"> and the current <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;i(t)" title="i(t)"> as a function of <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;t" title="t"> for <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;t&amp;space;\in&amp;space;[0,&amp;space;20\text{T}]" title="t \in [0, 20\text{T}]"> in <code>scene1</code> and the total energy <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;\text{E}(\text{T})" title="\text{E}(\text{T})"> stored in the system in <code>scene2</code>.</p><h3 id="2"><a class="anchor hidden-xs" href="#2" title="2"><span class="octicon octicon-link"></span></a>(2)</h3><p>You will see a transient behavior of the current <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;i(t)" title="i(t)"> before it reaches a steady-state oscillation around <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;t&amp;space;=&amp;space;9\text{T}" title="t = 9\text{T}">. Find <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;I" title="I">, the amplitude of the oscillating current, and <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;\phi" title="\phi"> the phase constant of the oscillating current relative to the voltage source during the 9-th period. Compare them to the theoretical values.</p><h3 id="3"><a class="anchor hidden-xs" href="#3" title="3"><span class="octicon octicon-link"></span></a>(3)</h3><p>After the voltage is turned off at <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;t&amp;space;=&amp;space;12&amp;space;\text{T}" title="t = 12 \text{T}">, you will see both the current and the total energy decays. Find the time <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;t" title="t"> such that the energy decays to 10% of the energy at the time the voltage is just turned off, i.e., <img src="https://latex.codecogs.com/svg.latex?\dpi{150}&amp;space;\text{E}(t)&amp;space;=&amp;space;0.1\text{E}(t=12\text{T})" title="\text{E}(t) = 0.1\text{E}(t=12\text{T})">.</p><h3 id="Template-codes"><a class="anchor hidden-xs" href="#Template-codes" title="Template-codes"><span class="octicon octicon-link"></span></a>Template codes</h3><pre><code class="python hljs"><span class="hljs-keyword">from</span> vpython <span class="hljs-keyword">import</span> *
 
 fd = <span class="hljs-number">120</span>                <span class="hljs-comment"># 120 Hz</span>
@@ -63,7 +63,16 @@ E_t = gcurve(color=color.red, graph=scene2)
 
 <span class="hljs-comment"># ===== Your codes here =====</span>
  
-</code></pre></div>
+</code></pre>
+<h2 id="Grading-Policy"><a class="anchor hidden-xs" href="#Grading-Policy" title="Grading-Policy"><span class="octicon octicon-link"></span></a>Grading Policy</h2>
+<ul>
+    <li>The i(t) and v(t) plots are roughly correct. (20%)</li>
+    <li>The E(t) plot is roughly correct. (20%)</li>
+    <li>The theoretical values of the current amplitude and the phase constant are roughly correct. (20%)</li>
+    <li>The simulation results of the current amplitude and the phase constant are roughly correct. (20%)</li>
+    <li>The answer of the part (3) (the time such that energy decays to 10% ...) is roughly correct. (20%)</li>
+</ul>
+</div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
@@ -78,13 +87,14 @@ E_t = gcurve(color=color.red, graph=scene2)
 </li>
 <li class=""><a href="#作業繳交格式" title="作業繳交格式">作業繳交格式</a></li>
 <li><a href="#Deadline" title="Deadline">Deadline</a></li>
-<li><a href="#I-Homework" title="I. Homework">I. Homework</a><ul class="nav">
+<li><a href="#Homework" title="Homework">Homework</a><ul class="nav">
 <li><a href="#1" title="(1)">(1)</a></li>
 <li><a href="#2" title="(2)">(2)</a></li>
 <li><a href="#3" title="(3)">(3)</a></li>
 <li><a href="#Template-codes" title="Template codes">Template codes</a></li>
 </ul>
 </li>
+<li><a href="#Grading-Policy" title="Grading Policy">Grading Policy</a></li>
 </ul>
 </li>
 </ul>
@@ -101,13 +111,14 @@ E_t = gcurve(color=color.red, graph=scene2)
 </li>
 <li class=""><a href="#作業繳交格式" title="作業繳交格式">作業繳交格式</a></li>
 <li><a href="#Deadline" title="Deadline">Deadline</a></li>
-<li><a href="#I-Homework" title="I. Homework">I. Homework</a><ul class="nav">
+<li><a href="#Homework" title="Homework">Homework</a><ul class="nav">
 <li><a href="#1" title="(1)">(1)</a></li>
 <li><a href="#2" title="(2)">(2)</a></li>
 <li><a href="#3" title="(3)">(3)</a></li>
 <li><a href="#Template-codes" title="Template codes">Template codes</a></li>
 </ul>
 </li>
+<li><a href="#Grading-Policy" title="Grading Policy">Grading Policy</a></li>
 </ul>
 </li>
 </ul>
